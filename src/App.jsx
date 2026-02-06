@@ -5,7 +5,6 @@ function App() {
 
   return (
     <>
-      <Dashboard />
       <div className="container grid grid-cols-2 justify-center items-center h-screen">
 
         <div className="card bg-white rounded-lg shadow-lg">
