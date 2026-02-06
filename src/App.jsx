@@ -1,22 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import { Dashboard } from './layouts/Dashboard'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home.jsx";
+import { DashboardLayout } from "./layouts/DashboardLayout.jsx";
+import { PublicRoutes } from "./routes/PublicRoutes.jsx";
 function App() {
-
   return (
-    <>
-      <div className="container grid grid-cols-2 justify-center items-center h-screen">
-
-        <div className="card bg-white rounded-lg shadow-lg">
-         Left
-        </div>
-        <div className="card bg-white rounded-lg shadow-lg"> Second </div>
-
-      </div>
-      
-
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<PublicRoutes />} >
+      <Route element={<DashboardLayout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
