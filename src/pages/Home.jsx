@@ -1,7 +1,7 @@
 export const Home = () => {
   return (
     <>
-    Hello
+    <p className="flex text-4xl text-center justify-center items-center h-screen">Welcome to Home Page</p>
   </> 
     )
 }
